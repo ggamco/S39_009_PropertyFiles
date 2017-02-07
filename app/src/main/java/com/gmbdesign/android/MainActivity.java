@@ -27,7 +27,12 @@ public class MainActivity extends AppCompatActivity {
             //2º recuperamos la propiedad alumnos_online
             String clave = properties.getProperty("alumnos_online");
 
-            Log.e("TAG", "El valor recuperado es: " + clave);
+            //3º almacenamos una nueva propiedad
+            properties.setProperty("alumnos_totales", "13");
+
+            String clave2 = properties.getProperty("alumnos_totales");
+
+            Log.e("TAG", "El valor recuperado es: " + clave2);
         } catch (IOException e) {
             Log.e("TAG", "No se puedo abrir el archivo properties");
             e.printStackTrace();
